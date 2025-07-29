@@ -51,7 +51,7 @@ const OtpForm = () => {
   return (
     <>
       <div className="flex items-center justify-center px-4 w-screen py-5 h-full">
-        <div className="bg-white shadow-lg rounded-xl w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
+        <div className="bg-white  w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
 
 
           <Formik
@@ -83,10 +83,10 @@ const OtpForm = () => {
                         name="token"
                         onBlur={handleBlur}
                         style={{
-                          width: "91px",
+                          width: "90px",
                           height: "40px",
                         }}
-                        className="rounded-lg gap-3   text-center text-xl  border border-gray-300 transition-all text-black/30 hover:ring-[#207883] hover:ring-opacity-30 focus:outline-none focus:border-[#207883] focus:ring-[#207883] focus:ring-2 focus:ring-opacity-30"
+                        className="rounded-lg gap-5  text-center text-xl  border border-gray-300 transition-all text-black/30 hover:ring-[#207883] hover:ring-opacity-30 focus:outline-none focus:border-[#207883] focus:ring-[#207883] focus:ring-2 focus:ring-opacity-30"
                       />
                     )}
                   />

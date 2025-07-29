@@ -23,7 +23,7 @@ const SignInForm = () => {
       values.email === dummyUser.email &&
       values.password === dummyUser.password
     ) {
-   
+
       navigate("/admin/dashboard");
     } else {
       alert("Invalid credentials");
@@ -44,13 +44,13 @@ const SignInForm = () => {
   return (
     <>
       <div className="flex items-center justify-center px-4 w-screen py-5 h-full">
-        <div className="bg-white shadow-lg rounded-xl w-full md:w-[630px] p-3">
-          <div className="text-center">
+             <div className="w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
+        
 
-            <h3 className="font-dm-sans font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[32px] leading-[40px] text-black text-center">
+            <h3 className=" font-semibold text-2xl sm:text-2xl   md:text-[32px]  mb-2  text-[#181D27] text-center">
               Log in to your account
             </h3>
-          </div>
+         
 
           <Formik
             initialValues={SIGNIN_INITIAL_VALUES}
@@ -102,17 +102,22 @@ const SignInForm = () => {
                 </div>
 
                 <CustomBtn
-                  text="Login"
+                  text="Sign in"
                   type="submit"
                   className="w-full bg-[#2563EB] hover:bg-[#5c81d1] text-white py-3 rounded"
                 />
-                <div className="mb-6 text-center my-3">
+                <div className="flex items-center justify-between my-4 text-sm">
+                  <label className="flex items-center space-x-2">
+                    <input type="checkbox" className="form-checkbox rounded" />
+                    <span className="text-sm font-medium text-[#414651]">Remember me</span>
+                  </label>
                   <Link to="/forgotPassword">
-                    <p className="text-base  font-dm-sans  text-black/60 ">
+                    <p className="text-sm font-semibold text-[#2563EB]">
                       Forgot password?
                     </p>
                   </Link>
                 </div>
+
               </form>
             )}
           </Formik>

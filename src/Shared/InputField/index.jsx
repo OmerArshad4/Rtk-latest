@@ -72,7 +72,7 @@ const InputField = (props) => {
           onKeyDown={handleKeyPress}
           min={type === "number" ? 0 : ""}
           step={type === "number" ? "any" : ""}
-          className={`mt-1 font-light text-base leading-5 rounded-md tracking-[0.01em] 	align-middle tabular-nums text-black/65   w-full py-3 border border-black/30 px-3 transition-all hover:ring-[#0052DE] hover:ring-opacity-30 focus:outline-none focus:border-[#2F4D67] focus:ring-[#2F4D67] focus:ring-2 focus:ring-opacity-30 focus-visible:outline-none focus-visible:border-[#2F4D67] focus-visible:ring-opacity-30 
+          className={`mt-1 font-light text-base leading-5 rounded-md tracking-[0.01em] bg-white border border-[#D5D7DA] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)]	align-middle tabular-nums text-black/65   w-full py-3   px-3 transition-all hover:ring-[#0052DE] hover:ring-opacity-30 focus:outline-none focus:border-[#2F4D67] focus:ring-[#2F4D67] focus:ring-2 focus:ring-opacity-30 focus-visible:outline-none focus-visible:border-[#2F4D67] focus-visible:ring-opacity-30 
           
           ${type === "password" ? "pr-14" : ""} ${className} ${
             type === "number" ? "appearance-none" : ""

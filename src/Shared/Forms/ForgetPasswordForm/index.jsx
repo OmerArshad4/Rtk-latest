@@ -34,7 +34,7 @@ const ForgotPasswordForm = (props) => {
   return (
     <>
       <div className="flex items-center justify-center px-4 w-screen py-5 h-full">
-        <div className="bg-white shadow-lg rounded-xl w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
+          <div className="bg-white w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
           
           <div className="w-full">
             <Formik

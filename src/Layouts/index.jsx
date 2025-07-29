@@ -27,7 +27,7 @@ const UserLayout = ({ isPrivate, children }) => {
 }, []);
 
   return (
-    <div className="flex min-h-screen bg-[#D8D8D8]">
+    <div className="flex min-h-screen bg-[#EDEDED]">
       {isPrivate && (
         <SideBar
           toggleSidebar={toggleSidebar}
