@@ -10,114 +10,89 @@ import { VERIFY_OTP_VALIDATION_SCHEMA } from "../../../Validations/Validations";
 import { VERIFY_OTP_API_URL } from "../../../Utils/constant";
 
 const OtpForm = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const [timeLeft, setTimeLeft] = useState(10);
-  const [userEmail, setUserEmail] = useState(10);
-  const [isResendDisabled, setIsResendDisabled] = useState(false);
+  const email = location?.state?.email || "johndoe@gmail.com";
 
-  // useEffect(() => {
-  //   !location?.state?.email && navigate("/");
-  // }, []);
+  const [showResendLink, setShowResendLink] = useState(false);
 
-  // useEffect(() => {
-  //   if (timeLeft > 0) {
-  //     const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-  //     return () => clearTimeout(timer);
-  //   } else {
-  //     setIsResendDisabled(false);
-  //   }
-  // }, [timeLeft]);
+  useEffect(() => {
+    const timer = setTimeout(() => setShowResendLink(true), 10000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const handleSubmit = (values) => {
-    console.log("logged clicked")
-    alert("clicked")
-    navigate("/setNewPassword")
-    const data = {
-      apiEndpoint: VERIFY_OTP_API_URL,
-      requestData: JSON.stringify(values),
-    };
+const handleOpenEmailApp = () => {
+ 
+  window.open("https://mail.google.com/mail/u/0/#inbox", "_blank");
+};
 
-    // dispatch(verifyEmailOtp(data)).then((res) => {
-    //   if (res.type === "verifyEmailOtp/fulfilled") {
-    //     navigate("/setNewPassword", {
-    //       state: { email: location?.state?.email },
-    //     });
-    //   }
-    // });
+  const handleResend = () => {
+    alert("Resending email...");
+    // Logic to resend OTP email
   };
 
   return (
     <>
-      <div className="flex items-center justify-center px-4 w-screen py-5 h-full">
-        <div className="bg-white  w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
+      <div className="flex items-center justify-center px-4 w-screen py-3 h-full">
+        <div className="w-full max-w-[500px] mx-auto p-3">
 
+          <div className="mb-2">
+              <p className="text-sm text-center text-gray-600 mb-6">
+          We sent a password reset link to <br />
+          <span className="font-medium text-gray-900">{email}</span>
+        </p>
+          </div>
 
-          <Formik
-            onSubmit={handleSubmit}
-            initialValues={{
-              ...VERIFY_OTP_INITIAL_VALUES,
-              email: location?.state?.email,
-            }}
-            validationSchema={VERIFY_OTP_VALIDATION_SCHEMA}
-          >
-            {({ values, errors, touched, handleChange, handleBlur }) => (
-              <Form>
-                <div className="mb-4 ">
-                  <label className="text-black  font-normal mb-1">
-                    Verification Code
-                  </label>
-                  <OtpInput
-                    value={values.token}
-                    numInputs={6}
-                    onChange={(token) =>
-                      handleChange({
-                        target: { name: "token", value: token },
-                      })
-                    }
-                    containerStyle="flex flex-wrap"
-                    renderInput={(props) => (
-                      <input
-                        {...props}
-                        name="token"
-                        onBlur={handleBlur}
-                        style={{
-                          width: "90px",
-                          height: "40px",
-                        }}
-                        className="rounded-lg gap-5  text-center text-xl  border border-gray-300 transition-all text-black/30 hover:ring-[#207883] hover:ring-opacity-30 focus:outline-none focus:border-[#207883] focus:ring-[#207883] focus:ring-2 focus:ring-opacity-30"
-                      />
-                    )}
-                  />
-                  {errors.token && touched.token && (
-                    <p className="text-sm text-red-500">{errors.token}</p>
-                  )}
-                </div>
+          <div className="flex justify-end items-center mb-4">
 
-                <div className="flex justify-end items-center mb-4">
+          </div>
+          <CustomBtn
+            text="Open email app"
+            handleOnClick ={handleOpenEmailApp}
+            className="w-full"
+
+          />
+        
+          <div className="mt-4 text-center text-sm text-gray-600">
+            Didn’t receive the email?{" "}
+            {showResendLink ? (
+              <button
+                onClick={handleResend}
+                className="text-blue-600 hover:underline font-medium"
+              >
+                Click to resend
+              </button>
+            ) : (
+              <span className="text-gray-400">Wait a moment...</span>
+            )}
+          </div>
+            <div className="flex items-center justify-center cursor-pointer">
                   <button
-                    type="button"
-                    // onClick={handleResendOtp}
-                    className={`text-sm font-bold ${isResendDisabled
-                        ? "text-gray-400"
-                        : "text-base   text-black/60 font-bold"
-                      }`}
-                    disabled={isResendDisabled}
+                    onClick={() => navigate("/")}
+                    className="mt-6 text-sm text-center text-[#535862] hover:text-gray-900 flex items-center gap-1"
                   >
-                    {isResendDisabled
-                      ? `Resend OTP in ${timeLeft}s`
-                      : "Resend OTP"}
+                    {/* SVG Arrow */}
+                    <svg
+                      width="15"
+                      height="14"
+                      viewBox="0 0 15 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3334 7.00033H1.66675M1.66675 7.00033L7.50008 12.8337M1.66675 7.00033L7.50008 1.16699"
+                        stroke="#535862"
+                        strokeWidth="1.66667"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    Back to log in
                   </button>
                 </div>
-                <CustomBtn
-                  text="Send Code"
-                  type="submit"
-                  className="py-3 px-6   rounded-sm w-full"
-                />
-              </Form>
-            )}
-          </Formik>
+
+
         </div>
       </div>
     </>

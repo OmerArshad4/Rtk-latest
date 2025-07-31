@@ -15,7 +15,7 @@ const VerifyOtp = () => {
           OtpHandleSubmit={handleSubmit}
           headingText="Check your email"
           imgSrc = {Images.emailLogo}
-          subHeading = "We sent a password reset link to johndoe@gmail.com"
+          
           imageWidth= "28px"
         />
       </div>

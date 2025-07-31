@@ -44,13 +44,13 @@ const SignInForm = () => {
   return (
     <>
       <div className="flex items-center justify-center px-4 w-screen py-5 h-full">
-             <div className="w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
-        
+     <div className="w-full max-w-[500px] mx-auto p-3">
 
-            <h3 className=" font-semibold text-2xl sm:text-2xl   md:text-[32px]  mb-2  text-[#181D27] text-center">
-              Log in to your account
-            </h3>
-         
+
+          <h3 className=" font-semibold text-2xl sm:text-2xl   md:text-[32px]  mb-2  text-[#181D27] text-center">
+            Log in to your account
+          </h3>
+
 
           <Formik
             initialValues={SIGNIN_INITIAL_VALUES}
@@ -128,3 +128,4 @@ const SignInForm = () => {
 };
 
 export default SignInForm;
+  

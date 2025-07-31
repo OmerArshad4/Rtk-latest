@@ -8,7 +8,7 @@ const EnterpriseCard = () => {
   const toggleAccordion = () => setIsOpen(!isOpen);
 
   return (
-    <div className="border rounded-lg p-4 bg-white shadow-md hover:shadow-md transition-all duration-300 max-w-full">
+    <div className="border border-[#D5DAE1] rounded-xl p-4 bg-white hover:shadow-sm transition">
       <div className="flex justify-between items-start cursor-pointer" onClick={toggleAccordion}>
      
         <div className="flex items-start gap-3">

@@ -16,12 +16,12 @@ const ForgotPasswordForm = (props) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (values) => {
-  navigate("/verifyOtp");
+    navigate("/verifyOtp", { state: { email: values.email } });
     const data = {
       apiEndpoint: FORGET_PASSWORD_API_URL,
       requestData: JSON.stringify(values),
     };
-  
+
     // dispatch(forgotPassword(data)).then((res) => {
     //      navigate("/verifyOtp", { state: { email: values?.email } });
     //   if (res.type === "forgotPassword/fulfilled") {
@@ -34,8 +34,8 @@ const ForgotPasswordForm = (props) => {
   return (
     <>
       <div className="flex items-center justify-center px-4 w-screen py-5 h-full">
-          <div className="bg-white w-full md:w-1/2 lg:w-2/5 xl:w-1/3 p-3">
-          
+        <div className="w-full max-w-[500px] mx-auto p-3">
+
           <div className="w-full">
             <Formik
               validationSchema={FORGOT_PASSWORD_SCHEMA}
@@ -71,10 +71,35 @@ const ForgotPasswordForm = (props) => {
 
                   <div className="mt-6">
                     <CustomBtn
-                      text="Get Code"
+                      text="Send verification"
                       type={"submit"}
-                      className="w-full mb-2 py-3 text-white"
+                      className="w-full"
                     />
+                  </div>
+                  <div className="flex items-center justify-center cursor-pointer">
+                    <button
+                      onClick={() => navigate("/")}
+                      className="mt-6 text-sm text-center text-[#535862] hover:text-gray-900 flex items-center gap-1"
+                    >
+                      {/* SVG Arrow */}
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.3334 7.00033H1.66675M1.66675 7.00033L7.50008 12.8337M1.66675 7.00033L7.50008 1.16699"
+                          stroke="#535862"
+                          strokeWidth="1.66667"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+
+                      Back to log in
+                    </button>
                   </div>
                 </form>
               )}

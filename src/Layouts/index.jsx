@@ -27,7 +27,7 @@ const UserLayout = ({ isPrivate, children }) => {
 }, []);
 
   return (
-    <div className="flex min-h-screen bg-[#EDEDED]">
+    <div className="flex min-h-screen ">
       {isPrivate && (
         <SideBar
           toggleSidebar={toggleSidebar}
@@ -37,7 +37,7 @@ const UserLayout = ({ isPrivate, children }) => {
 
       <div className={`flex-1 ${isPrivate ? "lg:ml-64" : ""}`}>
         {isPrivate && <Navbar toggleSidebar={toggleSidebar} />}
-        <main className="">{children}</main>
+        <main className="bg-[#EDEDED]">{children}</main>
       </div>
     </div>
   );
