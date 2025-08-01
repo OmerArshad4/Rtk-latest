@@ -24,7 +24,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
     },
     {
       title: "Leads",
-      link: "/admin/uploadCustomers",
+      link: "/admin/leads",
       icon: <img src={Images.contactUsLogo} alt="Leads" className="w-5 h-5" />,
     },
     {
@@ -54,7 +54,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
         <div>
           <div className="block lg:hidden">
             <div className="flex justify-between items-center p-4">
-              <h3 className="font-semibold text-xl">Sniffy Bot</h3>
+              <h3 className="font-semibold text-xl">Sales Ai</h3>
               <RxCross2
                 size={24}
                 onClick={toggleSidebar}

@@ -12,7 +12,11 @@ import dashboardLogo from "../Assests/auth/dashboard.svg";
 import teamsLogo from "../Assests/auth/teams.svg";
 import contactUsLogo from "../Assests/auth/contactUs.svg";
 import analyticsLogo from "../Assests/auth/analytics.svg";
-import settingsLogo from "../Assests/auth/settings.svg";
+import lead1Logo from "../Assests/leads/lead1.svg";
+import lead2Logo from "../Assests/leads/lead2.svg";
+import lead3Logo from "../Assests/leads/lead3.svg";
+import lead4Logo from "../Assests/leads/lead4.svg";
+import leadInfoLogo from "../Assests/leads/leadInfoAvatar.svg";
 
 const Images = {
   Car,
@@ -28,7 +32,13 @@ const Images = {
   teamsLogo,
   contactUsLogo,
   analyticsLogo,
-  settingsLogo
+ 
+  lead1Logo,
+  lead2Logo,
+  lead3Logo,
+  lead4Logo,
+  leadInfoLogo
+
 };
 
 export default Images;

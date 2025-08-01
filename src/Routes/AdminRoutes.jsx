@@ -7,6 +7,12 @@ const AdminRoutes = [
     path: "/admin/dashboard",
     component: lazy(() => import("../Pages/Admin/Dashboard")),
   },
+    {
+    role: "admin",
+    isPublic: false,
+    path: "/admin/leads",
+    component: lazy(() => import("../Pages/Admin/Leads/index")),
+  },
   {
     role: "admin",
     isPublic: false,
