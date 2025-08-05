@@ -13,6 +13,18 @@ const AdminRoutes = [
     path: "/admin/leads",
     component: lazy(() => import("../Pages/Admin/Leads/index")),
   },
+     {
+    role: "admin",
+    isPublic: false,
+    path: "/admin/email",
+    component: lazy(() => import("../Pages/Admin/Email/Email")),
+  },
+    {
+    role: "admin",
+    isPublic: false,
+    path: "/admin/calendar",
+    component: lazy(() => import("../Pages/Admin/Calendar/Index")),
+  },
   {
     role: "admin",
     isPublic: false,

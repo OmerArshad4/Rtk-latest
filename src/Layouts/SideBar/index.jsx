@@ -32,6 +32,17 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
       link: "/admin/customersListing",
       icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
     },
+     {
+      title: "Email",
+      link: "/admin/email",
+      icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
+    },
+       {
+      title: "Calendar",
+      link: "/admin/calendar",
+      icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
+    },
+    
     {
       title: "Team",
       link: "/admin/tasks",
@@ -97,7 +108,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
         </div>
 
       </div>
-    )
+    ) 
   );
 };
 
