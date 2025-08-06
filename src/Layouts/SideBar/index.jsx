@@ -29,7 +29,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
     },
     {
       title: "Call Analytics",
-      link: "/admin/customersListing",
+     link: "/admin/call",
       icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
     },
      {
@@ -42,6 +42,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
       link: "/admin/calendar",
       icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
     },
+    
     
     {
       title: "Team",
