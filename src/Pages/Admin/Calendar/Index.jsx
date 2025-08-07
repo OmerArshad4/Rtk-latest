@@ -56,7 +56,7 @@ const CalendarPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4">
 
                 <div className="space-y-4">
-                    <div className="bg-white p-4 rounded-lg shadow-sm border">
+                    <div className="bg-white p-4 rounded-lg shadow-lg">
                         <p className="text-sm font-medium text-gray-700">April 16, 2025</p>
                         <div className="mt-4 space-y-4">
                             <div className="bg-yellow-50 border-l-4 border-yellow-300 p-3 rounded">
@@ -74,7 +74,7 @@ const CalendarPage = () => {
                 </div>
 
 
-                <div className="bg-white rounded-lg shadow-sm border p-4">
+                <div className="bg-white rounded-lg shadow-lg p-4">
                     <div className="flex justify-between items-center mb-4">
                         <div className="flex items-center gap-2">
                             <FiChevronLeft className="cursor-pointer" onClick={handlePrev} />
