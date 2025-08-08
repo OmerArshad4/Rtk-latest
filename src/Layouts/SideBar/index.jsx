@@ -54,7 +54,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
     {
       title: "Settings",
       link: "/admin/settings",
-      icon: <img src={Images.settingsLogo} alt="Settings" className="w-5 h-5" />,
+      icon: <img src={Images.settingLogo} alt="Settings" className="w-5 h-5" />,
     },
   ];
 

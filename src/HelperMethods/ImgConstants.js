@@ -12,6 +12,7 @@ import dashboardLogo from "../Assests/auth/dashboard.svg";
 import teamsLogo from "../Assests/auth/teams.svg";
 import contactUsLogo from "../Assests/auth/contactUs.svg";
 import analyticsLogo from "../Assests/auth/analytics.svg";
+import settingLogo from "../Assests/auth/settings.svg";
 import lead1Logo from "../Assests/leads/lead1.svg";
 import lead2Logo from "../Assests/leads/lead2.svg";
 import lead3Logo from "../Assests/leads/lead3.svg";
@@ -32,7 +33,7 @@ const Images = {
   teamsLogo,
   contactUsLogo,
   analyticsLogo,
- 
+ settingLogo,
   lead1Logo,
   lead2Logo,
   lead3Logo,
