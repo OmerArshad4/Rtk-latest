@@ -34,8 +34,8 @@ const Leads = () => {
     <div className="p-6 bg-[#F8FAFB] min-h-screen space-y-6">
 
       <SectionHeader title="Lead Details" />
-         <LeadsTable/>
-      {/* <div className="flex flex-col lg:flex-row gap-4">
+
+      <div className="flex flex-col lg:flex-row gap-4">
 
         <div className="w-full lg:w-[70%] space-y-4">
           <InteractionSummaryCard
@@ -50,7 +50,7 @@ const Leads = () => {
           <LeadInfoCard />
           <RecentInteractionsCard />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

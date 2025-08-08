@@ -11,6 +11,7 @@ const EmailPage = () => {
   const [subject, setSubject] = useState('');
   const [sentEmails, setSentEmails] = useState([]);
   const [drafts, setDrafts] = useState([]);
+
   const [inboxEmails, setInboxEmails] = useState([
     {
       to: 'me@example.com',
@@ -75,19 +76,17 @@ const EmailPage = () => {
         <h1 className="text-xl font-semibold mb-6">Emails</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
-          {/* Sidebar */}
           <div className="space-y-2">
             {['Compose', 'Inbox', 'Sent', 'Draft'].map((tab) => (
               <button
                 key={tab}
-                className={`w-full px-4 py-2 rounded-md text-left font-medium border ${
-                  activeTab === tab
+                className={`w-full px-4 py-2 rounded-md text-left font-medium border ${activeTab === tab
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-800 border-gray-200'
-                }`}
+                  }`}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab}{' '}
+                {tab}
                 {tab === 'Inbox' && (
                   <span className="ml-2 inline-flex items-center justify-center text-xs font-bold bg-white text-blue-600 w-5 h-5 rounded-full">
                     {inboxEmails.length}
@@ -97,7 +96,6 @@ const EmailPage = () => {
             ))}
           </div>
 
-       
           <div className="space-y-4">
             {activeTab === 'Compose' && (
               <>

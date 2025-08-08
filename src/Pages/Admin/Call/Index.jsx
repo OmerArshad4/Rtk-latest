@@ -34,7 +34,7 @@ const statCardData = [
     title: 'Total Leads Assigned',
     value: '261',
     subtitle: 'This Week: 45  ↑ 12%',
-     subtitleColor: 'text-[#15803D]',
+    subtitleColor: 'text-[#15803D]',
     borderColor: 'border-blue-500',
   },
   {
@@ -96,7 +96,7 @@ const CallAnalytics = () => {
           ))}
         </div>
 
-        {/* Charts */}
+    
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* Bar Chart */}
           <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -114,7 +114,7 @@ const CallAnalytics = () => {
             </ResponsiveContainer>
           </div>
 
-          {/* Line Chart */}
+    
           <div className="bg-white p-4 rounded-lg shadow-sm">
             <h2 className="text-sm font-semibold mb-1 flex items-center gap-2">
               <Icon label="Email" /> Email Engagement Trends
