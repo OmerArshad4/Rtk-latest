@@ -11,8 +11,8 @@ export function PublicRoute({ Component, props, role }) {
     if (user) {
       user.role === "admin"
         ? navigate("/admin/dashboard")
-        : user.role === "Technician"
-        ? navigate("/technician/assignedVehicles")
+        : user.role === "agent"
+        ? navigate("/agent/dashboard")
         : navigate("/");
     }
   }, [user, navigate]);

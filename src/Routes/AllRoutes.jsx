@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import AdminRoutes from "./AdminRoutes";
-import TechnicianRoutes from "./TechnicianRoutes";
 
+import AgentRoutes from "./AgentRoutes";
 const routes = [
   {
     path: "/",
@@ -35,6 +35,6 @@ const routes = [
   },
 ]
   .concat(AdminRoutes)
-  .concat(TechnicianRoutes);
+  .concat(AgentRoutes);
 
 export default routes;

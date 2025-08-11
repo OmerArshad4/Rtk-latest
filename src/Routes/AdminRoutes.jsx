@@ -13,66 +13,41 @@ const AdminRoutes = [
     path: "/admin/leads",
     component: lazy(() => import("../Pages/Admin/Leads/index")),
   },
-     {
+      {
     role: "admin",
     isPublic: false,
-    path: "/admin/email",
-    component: lazy(() => import("../Pages/Admin/Email/Email")),
+    path: "/admin/viewLeads",
+    component: lazy(() => import("../Pages/Admin/Leads/index")),
   },
-    {
-    role: "admin",
-    isPublic: false,
-    path: "/admin/calendar",
-    component: lazy(() => import("../Pages/Admin/Calendar/Index")),
-  },
+  
     {
     role: "admin",
     isPublic: false,
     path: "/admin/call",
     component: lazy(() => import("../Pages/Admin/Call/Index")),
   },
-  {
-    role: "admin",
-    isPublic: false,
-    path: "/admin/allVehicles",
-    component: lazy(() => import("../Pages/Vehicles")),
-  },
-  {
-    role: "admin",
-    isPublic: false,
-    path: "/admin/allVehicles/:status",
-    component: lazy(() => import("../Pages/Vehicles")),
-  },
-  {
-    role: "admin",
-    isPublic: false,
-    path: "/admin/technicians",
-    component: lazy(() => import("../Pages/Admin/Technicians")),
-  },
+ 
+  // {
+  //   role: "admin",
+  //   isPublic: false,
+  //   path: "/admin/allVehicles/:status",
+  //   component: lazy(() => import("../Pages/Vehicles")),
+  // },
+ 
   {
     role: "admin",
     isPublic: false,
     path: "/admin/settings",
     component: lazy(() => import("../Pages/Admin/Settings")),
   },
-  {
-    role: "admin",
-    isPublic: false,
-    path: "/admin/deliveredVehicles",
-    component: lazy(() => import("../Pages/Delivered_Vehicles")),
-  },
-  {
-    role: "admin",
-    isPublic: false,
-    path: "/admin/partsListing/:vehicleId",
-    component: lazy(() => import("../Pages/PartsListing")),
-  },
-  {
-    role: "admin",
-    isPublic: false,
-    path: "/allParts",
-    component: lazy(() => import("../Pages/PartsListing")),
-  },
+ 
+  // {
+  //   role: "admin",
+  //   isPublic: false,
+  //   path: "/admin/partsListing/:vehicleId",
+  //   component: lazy(() => import("../Pages/PartsListing")),
+  // },
+ 
 ];
 
 export default AdminRoutes;

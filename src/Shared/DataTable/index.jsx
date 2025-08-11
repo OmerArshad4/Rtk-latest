@@ -28,48 +28,58 @@ const DataTableComponent = (props) => {
     },
     headCells: {
       style: {
+        fontFamily: "DM Sans, sans-serif",
         fontSize: "14px",
-        color: "#666666",
+        fontWeight: 400,
+        color: "#020817",
+        lineHeight: "14px",
       },
     },
     rows: {
       style: {
         padding: "10px 0px",
-        fontSize: "16px",
-        fontWeight: "400",
+        fontFamily: "DM Sans, sans-serif",
+        fontSize: "12px",
+        fontWeight: 400,
+        color: "#020817",
+        lineHeight: "16px",
       },
     },
     tableWrapper: {
       style: {
-        zIndex: 1,
+        width: "100%",
+        overflow: "visible",
       },
     },
   };
 
   return (
-    <DataTable
-      striped
-      sortable
-      responsive
-      data={data}
-      theme={"light"}
-      paginationServer
-      highlightOnHover
-      columns={columns}
-      pagination={pagination}
-      customStyles={customStyles}
-      onRowClicked={onRowClicked}
-      onChangePage={onChangePage}
-      paginationTotalRows={totalRows}
-      selectableRows={selectableRows}
-      expandableRows={expandableRows}
-      // clearSelectedRows={clearSelectedRows}
-      onChangeRowsPerPage={onChangeRowsPerPage}
-      expandableRowsComponent={ExpandedComponent}
-      selectableRowDisabled={selectableRowDisabled}
-      onSelectedRowsChange={handleSelectedRowsChange}
-      paginationRowsPerPageOptions={[10, 20, 30, 50, 75, 100]}
-    />
+    <div className="">
+      <DataTable
+        striped
+        sortable
+        responsive
+        data={data}
+        theme={"light"}
+        paginationServer
+        highlightOnHover
+        columns={columns}
+        pagination={pagination}
+        customStyles={customStyles}
+        onRowClicked={onRowClicked}
+        onChangePage={onChangePage}
+        paginationTotalRows={totalRows}
+        selectableRows={selectableRows}
+        expandableRows={expandableRows}
+        // clearSelectedRows={clearSelectedRows}
+        onChangeRowsPerPage={onChangeRowsPerPage}
+        expandableRowsComponent={ExpandedComponent}
+        selectableRowDisabled={selectableRowDisabled}
+        onSelectedRowsChange={handleSelectedRowsChange}
+        paginationRowsPerPageOptions={[2, 20, 30, 50, 75, 100]}
+      />
+    </div>
+
   );
 };
 

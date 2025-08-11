@@ -10,13 +10,16 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
   const path = location.pathname;
   const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState("");
-  const { user } = useSelector((state) => state.user);
-
+  // const { user } = useSelector((state) => state.user);
+     const  user = {
+      role:"agent",
+      // role:"admin",
+     }
   const LogOut = useCallback(() => {
     dispatch(customLogout());
   }, []);
 
-  const AdminPages = [
+  const AdminPages  = [
     {
       title: "Dashboard",
       link: "/admin/dashboard",
@@ -32,16 +35,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
      link: "/admin/call",
       icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
     },
-     {
-      title: "Email",
-      link: "/admin/email",
-      icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
-    },
-       {
-      title: "Calendar",
-      link: "/admin/calendar",
-      icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
-    },
+
     
     
     {
@@ -57,8 +51,47 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
       icon: <img src={Images.settingLogo} alt="Settings" className="w-5 h-5" />,
     },
   ];
+    const AgentPages = [
+    {
+      title: "Dashboard",
+      link: "/agent/dashboard",
+      icon: <img src={Images.dashboardLogo} alt="Dashboard" className="w-5 h-5" />,
+    },
+    {
+      title: "Leads",
+      link: "/agent/leads",
+      icon: <img src={Images.contactUsLogo} alt="Leads" className="w-5 h-5" />,
+    },
+     {
+      title: "Call Analytics",
+     link: "/agent/call",
+      icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
+    },
+         {
+      title: "Email",
+      link: "/agent/email",
+      icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
+    },
+       {
+      title: "Calendar",
+      link: "/agent/calendar",
+      icon: <img src={Images.analyticsLogo} alt="analytics" className="w-5 h-5" />,
+    },
+    {
+      title: "Team",
+      link: "/agent/team",
+      icon: <img src={Images.teamsLogo} alt="Teams" className="w-5 h-5" />,
+    },
 
-  const sideBarLinks = user?.role === "admin" ? AdminPages : AdminPages;
+
+    {
+      title: "Settings",
+      link: "/agent/settings",
+      icon: <img src={Images.settingLogo} alt="Settings" className="w-5 h-5" />,
+    },
+  ];
+
+  const sideBarLinks = user?.role === "admin" ? AdminPages : AgentPages;
 
   return (
     isSidebarOpen && (
