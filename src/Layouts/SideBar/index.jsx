@@ -11,6 +11,7 @@ const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
   const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState("");
   // const { user } = useSelector((state) => state.user);
+ 
      const  user = {
       role:"agent",
       // role:"admin",

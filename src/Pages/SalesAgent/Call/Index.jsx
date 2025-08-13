@@ -11,6 +11,7 @@ import {
   Line,
 } from 'recharts';
 import CallStatCard from '../../../Shared/CallAnalyticsCard/CallStatsCard';
+import Images from '../../../HelperMethods/ImgConstants';
 
 // Mock icons (you'll replace with Lucide icons)
 const Icon = ({ label }) => (
@@ -31,7 +32,8 @@ const Icon = ({ label }) => (
 
 const statCardData = [
   {
-    title: 'Total Leads Assigned',
+    title: 'Totalsss Leads Assigned',
+    iconKey: Images.call1Logo, 
     value: '261',
     subtitle: 'This Week: 45  ↑ 12%',
     subtitleColor: 'text-[#15803D]',
@@ -39,6 +41,7 @@ const statCardData = [
   },
   {
     title: 'Total Calls Initiated',
+       iconKey: Images.call2Logo, 
     value: '186',
     subtitle: 'This Week: 32  ↑ 8%',
     subtitleColor: 'text-[#1D4ED8]',
@@ -46,6 +49,7 @@ const statCardData = [
   },
   {
     title: 'Follow-up Scheduled',
+      iconKey: Images.call3Logo, 
     value: '117',
     subtitle: 'This Week: 18  ↑ 15%',
     subtitleColor: 'text-[#7E22CE]',
@@ -53,6 +57,7 @@ const statCardData = [
   },
   {
     title: 'Leads Add',
+     iconKey: Images.call4Logo, 
     value: '94',
     subtitle: 'This Week: 15  ↓ 3%',
     subtitleColor: 'text-[#C2410C]',
@@ -83,7 +88,7 @@ const CallAnalytics = () => {
         <div className="flex justify-between items-center">
           <h1 className="text-xl font-semibold">Call Analytics</h1>
           <div className="flex gap-3">
-            <button className="border px-3 py-1 rounded-md text-sm">Filter</button>
+            <button className="border  px-3 py-1 rounded-md text-sm">Filter</button>
             <button className="border px-3 py-1 rounded-md text-sm">22 Mar - 22 Apr</button>
             <button className="border px-3 py-1 rounded-md text-sm">Export CSV</button>
           </div>
@@ -117,7 +122,7 @@ const CallAnalytics = () => {
     
           <div className="bg-white p-4 rounded-lg shadow-sm">
             <h2 className="text-sm font-semibold mb-1 flex items-center gap-2">
-              <Icon label="Email" /> Email Engagement Trends
+              <img src={Images.call5Logo}/>Email Engagement Trends
             </h2>
             <p className="text-xs text-gray-500 mb-2">Open and click rates over the past month</p>
             <div className="bg-green-100 text-green-700 text-center py-2 font-bold rounded mb-2">

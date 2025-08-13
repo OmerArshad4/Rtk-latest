@@ -18,6 +18,11 @@ import lead2Logo from "../Assests/leads/lead2.svg";
 import lead3Logo from "../Assests/leads/lead3.svg";
 import lead4Logo from "../Assests/leads/lead4.svg";
 import leadInfoLogo from "../Assests/leads/leadInfoAvatar.svg";
+import call1Logo from "../Assests/call/call1.svg";
+import call2Logo from "../Assests/call/call2.svg";
+import call3Logo from "../Assests/call/call3.svg";
+import call4Logo from "../Assests/call/call4.svg";
+import call5Logo from "../Assests/call/call5.svg";
 
 const Images = {
   Car,
@@ -38,7 +43,12 @@ const Images = {
   lead2Logo,
   lead3Logo,
   lead4Logo,
-  leadInfoLogo
+  leadInfoLogo,
+  call1Logo,
+  call2Logo,
+  call3Logo,
+  call4Logo,
+  call5Logo
 
 };
 
